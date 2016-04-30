@@ -10,7 +10,7 @@ VOLUME ["/input","/output"]
 # Define working directory, where you should map your project to
 WORKDIR /input
 #the name of the project you want to build
-ENV $project
+ENV $project=api.superwidgets.com
 
 # Define default command.
 CMD ["apidoc","-i", "/input/$project", "-o /output"]
