@@ -15,4 +15,4 @@ ENV $project=api.superwidgets.com
 ENV templateDir="/input/template/"
 
 # Define default command.
-CMD ["apidoc","-i", "/input/$project", "-o /output", "-t $templateDir"]
+CMD ["apidoc","-i /input/$project", "-o /output/", "-t $templateDir"]
