@@ -11,7 +11,7 @@ VOLUME ["/input","/output"]
 WORKDIR /input
 #the name of the project you want to build
 ENV $project=api.superwidgets.com
-ENV templateDir=/input/template #template dir can be overridden
+ENV templateDir=/input/template/  #template dir can be overridden
 
 # Define default command.
 CMD ["apidoc","-i", "/input/$project", "-o /output". "-t $templateDir"]
