@@ -13,7 +13,7 @@ We're using this image at [Voxpopme](https://www.voxpopme.com) to ensure we have
 - Define the source for your docs as build-arg variable `project=api.superwidgets.com` 
 - Your HTML generated output directory should be mapped to the `/output` directory:
 
-``
+```
 docker run -it --rm \
 -v ${PWD}:/input -v \
 --build-arg project=api.superwidgets.com \
