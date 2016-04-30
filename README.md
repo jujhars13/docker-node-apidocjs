@@ -12,6 +12,8 @@ We're using this image at [Voxpopme](https://www.voxpopme.com) to ensure we have
 Your project source directory should be mapped to the `/input` directory:
 Your HTML generated output directory should be mapped to the `/output` directory:
 
+```
 docker run -it --rm \
 -v ${PWD}/api:/input -v ${PWD}/html:/output \
 jujhars13/docker-node-apidocjs
+```
