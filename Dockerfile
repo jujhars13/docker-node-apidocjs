@@ -12,7 +12,7 @@ WORKDIR /input
 #the name of the project you want to build
 ENV $project=api.superwidgets.com
 #template dir can be overridden
-ENV templateDir="/input/template/"
+ENV $templateDir="/input/template/"
 
 # Define default command.
 CMD ["apidoc","-i /input/$project/", "-o /output/", "-t $templateDir"]
