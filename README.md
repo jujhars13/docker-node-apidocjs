@@ -16,7 +16,7 @@ We're using this image at [Voxpopme](https://www.voxpopme.com) to ensure we have
 ```
 docker run -it --rm \
 -v ${PWD}:/input -v \
---build-arg project=api.superwidgets.com \
+-e project=api.superwidgets.com \
 ${PWD}/html:/output \
 jujhars13/docker-node-apidocjs
 ```
