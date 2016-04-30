@@ -4,16 +4,10 @@ MAINTAINER Jujhar Singh <jujhar+docker@jujhar.com>
 # Install apidoc
 RUN npm install -g apidoc
 
-
-VOLUME ["/input","/output"]
+VOLUME ["/app", "/output", "/projDir"]
 
 # Define working directory, where you should map your project to
-WORKDIR /input
-#the name of the project you want to build
-ENV project=api.superwidgets.com
-#template dir can be overridden
-ENV templateDir="/input/template/"
+WORKDIR /app
 
-# Define default command.
-CMD ["apidoc","-i ${project}/", "-o /output/", "-t ${templateDir}"]
+CMD ["/usr/local/bin/apidoc", "-i /projDir", "-o /output", "-t /app/template"]
 
