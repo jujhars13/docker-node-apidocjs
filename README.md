@@ -9,14 +9,11 @@ We're using this image at [Voxpopme](https://www.voxpopme.com) to ensure we have
 
 
 ### Usage
-1. Your project root directory should be mapped to the `/input` directory
-2. Define the source for your docs as an env variable `project=api.superwidgets.com` 
-3. Your HTML generated output directory should be mapped to the `/output` directory
+simply mount your project folder to `/app` and run the apidoc command as you usually would.
 
 ```
-docker run -it --rm \
--v ${PWD}:/input -v \
--e project=api.superwidgets.com \
-${PWD}/html:/output \
-jujhars13/docker-node-apidocjs
+docker run --rm \
+-v ${PWD}:/app \
+jujhars13/docker-node-apidocjs \
+apidoc -i api.superwidgets.com/ -o html/public -t template
 ```
